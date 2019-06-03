@@ -33,7 +33,7 @@ class Symbol:
         return f'Symbol({self._desc})'
 
     def __gt__(self, other):
-        if other.__class__ is Symbol:
+        if other.__class__ is not Symbol:
             return False
         return id(self) > id(other)
 
